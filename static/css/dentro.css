@@ -1,0 +1,127 @@
+@font-face {
+    font-family: Swiss-head;
+    src: url('../fonts/ar.ttf');
+  }
+  @font-face {
+    font-family: Swiss-normal;
+    src: url('../fonts/ar.ttf');
+  }
+  @media (max-width: 768px) {
+    #sidebar {
+        margin-left: -250px;
+    }
+    #sidebar.active {
+        margin-left: 0;
+    }
+}
+  body{
+    background-color:whitesmoke;
+    font-family: Swiss-normal;
+    color:	cornflowerblue;
+  }
+  input{
+    background-color:#252850;
+    font-family: Swiss-normal;
+  }
+  .img-thumbnail{
+    background-color:cornflowerblue;
+    font-family: Swiss-normal;
+    border-color:cornflowerblue;
+  }
+  .modal, .modal-body{
+    background-color:#252850;
+    font-family: Swiss-normal;
+  }
+  .navbar{
+    background-color:cornflowerblue;
+    font-family: Swiss-normal;
+    color: whitesmoke;
+  }
+  #user{
+  color:cornflowerblue
+  }
+  .navbar-toggler{
+    color:whitesmoke
+  }
+  a{
+    cursor:pointer;
+    color:whitesmoke
+  }
+  #fix2019, #fix2020, #fix2021{
+      position: relative;
+      margin: auto;
+      height: 30vh;
+      width: 20vw;
+    
+  }
+
+
+
+#sidebar.active {
+    margin-left: -250px;
+}
+#sidebar {
+
+    height: 100vh;
+    display:inline-block;
+}
+.cuerpo {
+  height: 100vh;
+  border-color: black;
+  display:inline-block;
+  margin-top:20;
+  
+}
+a[data-toggle="collapse"] {
+    position: relative;
+}
+
+.dropdown-toggle::after {
+    display: block;
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+}
+.derecha{
+    cursor: pointer;
+}
+
+.entity-s{
+    cursor:pointer;
+    color:white;
+    background-color: cornflowerblue;
+    text-align: left;
+}
+.fas{
+    cursor:pointer
+
+}
+ul {
+  list-style-type: none;
+}
+.boton{
+  cursor:pointer;
+}
+.panel{
+  font-size: 2rem;
+  text-align: center;
+}
+
+#template,#project{
+  margin-top: 5vh;
+}
+
+.btn-group.special {
+  display: flex;
+}
+
+.special .btn {
+  flex: 1
+}
+
+#scroll-container {
+  height: 70vh;
+  overflow-y: scroll;
+  user-select: none;
+}

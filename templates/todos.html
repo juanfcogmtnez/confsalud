@@ -1,0 +1,83 @@
+{% extends "basedash.html" %}
+{% block title %}Configurador espacios salud{% endblock %}
+{% block menu %}
+<ul class="nav nav-pills">
+  <li class="nav-item dropdown" id="menu">
+    <a class="nav-link dropdown-toggle" data-toggle="dropdown">Proyecto plantilla: <span id="menu1st">{{proy}}</span></a><div id="selbase" class="dropdown-menu"></div>
+  </li>
+  <li class="nav-item dropdown">
+    <a class="nav-link dropdown-toggle" data-toggle="dropdown">Proyecto construcción: <span id="menu2nd">{{cons}}</span></a><div id="selbuild" class="dropdown-menu"></div>
+  </li>
+</ul>
+
+{% endblock %}
+{% block content %}
+<div class="container-fluid">
+<div class="row">
+  <div class="col-sm-6" style="margin-top:2em">
+    <h2>Plantilla</h2>
+    <form class="form-inline"><input id="btpl" type="text" class="form-control" placeholder="Búsqueda"></form>
+    <br />
+    <div id="jstree">
+      <!-- in this example the tree is populated from inline HTML -->
+    </div>
+  </div>
+  <div class="col-sm-6" style="margin-top:2em">
+      <h2>Configurador <span id="spanproj"></span></h2>
+      <form class="form-inline"><input id="bbuild" type="text" class="form-control" placeholder="Búsqueda">
+        <button id="guardartemp" type="button" class="btn btn-outline-info" onclick="guardatemp('si')"> <i class="fas fa-save"> </i> Guardar</button>
+        <button id="guardardef" type="button" class="btn btn-outline-dark" onclick="guardadef()"> <i class="fas fa-save"> </i> Guardar como plantilla</button>
+        <button id="plane" type="button" class="btn btn-outline-success" onclick="planeb()"><i class="fas fa-file-excel"></i> Plan de espacios</button>
+        <button id="planab" type="button" class="btn btn-outline-success" onclick="planabc()"><i class="fas fa-file-excel"></i> Abc...</button>
+        </form>
+      <br />
+      <div id="jstree2">
+        <!-- in this example the tree is populated from inline HTML -->
+      </div>
+  </div>
+</div>
+  <!-- Modal -->
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title" style="text-align:left" id="tit">Detalle</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button><br>
+          
+        </div>
+        <div class="modal-body" id="modal-body">
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-success" id="guardarmodal">Guardar</button>
+          <button type="button" class="btn btn-danger" id="borramodal">Borrar</button>
+          <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+    <!-- Modal -->
+    <div class="modal fade" id="otherModal" role="dialog">
+      <div class="modal-dialog">
+      
+        <!-- Modal content-->
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title" style="text-align:left" id="omtit">Espere mientras se graban los datos</h4>
+            
+          </div>
+          <div class="modal-body" id="modal-body">
+            <div class="spinner-border text-info text-center"></div>
+          </div>
+          <div class="modal-footer">
+          </div>
+        </div>
+        
+      </div>
+    </div>
+<script type="text/javascript" src="/static/js/jstree.min.js"></script>
+<script type="text/javascript" src="/static/js/mi.js"></script>
+<script type="text/javascript" src="/static/js/sample.js"></script>
+{% endblock %}
